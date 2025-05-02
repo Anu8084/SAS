@@ -20,6 +20,14 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api', authRoutes);
 app.use('/api/student', studentRoutes);
 
+
+app.get('/', (req, res) => {
+    res.status(200).send('✅ Backend is running successfully!');
+  });
+
+
+
+
   
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
